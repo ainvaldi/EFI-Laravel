@@ -7,4 +7,5 @@ Este proyecto web realizado en laravel es un software de gestion. Permite contro
 
 ## Estructura de la Base de Datos
 
+<a href="#"><img src="https://ibb.co/6WVDrrd" alt="DataBase"></a>
 
