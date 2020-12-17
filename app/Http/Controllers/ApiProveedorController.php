@@ -9,13 +9,13 @@ use sisVentas\Persona;
 use Illuminate\Support\Facades\Redirect;
 use sisVentas\Http\Requests\PersonaFormRequest;
 use DB;
-class ApiClienteController extends Controller
+class ApiProveedorController extends Controller
 {
     public function index(Request $request)
     {
         $personas = DB::table('persona')
         ->select('persona.idpersona','persona.nombre','persona.num_documento')
-        ->where('tipo_persona','=','Cliente')
+        ->where('tipo_persona','=','Proveedor')
         ->orderBy('persona.idpersona','desc')
         ->get();
         return $personas;
@@ -23,7 +23,7 @@ class ApiClienteController extends Controller
     public function store(Request $request)
     {
         $persona = new Persona;
-        $persona ->tipo_persona='Cliente';
+        $persona ->tipo_persona='Proveedor';
         $persona ->nombre=$request->get('nombre');
         $persona ->tipo_documento=$request->get('tipo_documento');
         $persona ->num_documento=$request->get('num_documento');
@@ -37,13 +37,13 @@ class ApiClienteController extends Controller
         $personas = DB::table('persona as p')
         ->select('p.idpersona','p.nombre','p.tipo_persona','p.tipo_documento','p.num_documento','p.direccion','p.telefono','p.email')
         ->where('p.idpersona','=',$id)
-        ->where('p.tipo_persona','=','Cliente')
+        ->where('p.tipo_persona','=','Proveedor')
         ->get();
         return $personas;
     }
     public function edit($id)
     {
-        return view("ventas.cliente.edit",["persona"=>Persona::findOrFail($id)]);
+        return view("ventas.proveedor.edit",["persona"=>Persona::findOrFail($id)]);
     }
     public function update(PersonaFormRequest $request,$id)
     {
@@ -55,13 +55,13 @@ class ApiClienteController extends Controller
         $persona->telefono=$request->get('telefono');
         $persona->email=$request->get('email');
         $persona->update();
-        return Redirect::to('ventas/cliente');
+        return Redirect::to('ventas/proveedor');
     }
     public function destroy($id)
     {
         $persona=Persona::findOrFail($id);
         $persona->tipo_persona='Inactivo';
         $persona->update();
-        return Redirect::to('ventas/cliente');
+        return Redirect::to('ventas/proveedor');
     }
 }
