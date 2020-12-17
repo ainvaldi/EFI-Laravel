@@ -53,34 +53,34 @@ Seguido de esto ingresaremos:
  - GET de categorias
    - http://localhost:8000/api/almacen/categoria
  - GET de una categoria
-   - http://localhost:8000/api/almacen/categoria/{id]
+   - http://localhost:8000/api/almacen/categoria/{id}
  - POST de una categoria
    - http://localhost:8000/api/almacen/categoria
  - PUT de una categoria
-   - http://localhost:8000/api/almacen/categoria/{id]
+   - http://localhost:8000/api/almacen/categoria/{id}
  - DELETE de una categoria
-   - http://localhost:8000/api/almacen/categoria/{id]
+   - http://localhost:8000/api/almacen/categoria/{id}
    
  #### Articulos
  
  - GET de articulos
    - http://localhost:8000/api/almacen/articulo
  - GET de una categoria
-   - http://localhost:8000/api/almacen/articulo/{id]
+   - http://localhost:8000/api/almacen/articulo/{id}
  - POST de una categoria
    - http://localhost:8000/api/almacen/articulo
  - PUT de una categoria
-   - http://localhost:8000/api/almacen/articulo/{id]
+   - http://localhost:8000/api/almacen/articulo/{id}
  - DELETE de una categoria
-   - http://localhost:8000/api/almacen/articulo/{id]
+   - http://localhost:8000/api/almacen/articulo/{id}
  
  #### Clientes y Proveedores
  
  - GET de clientes
    - http://localhost:8000/api/ventas/cliente
  - GET de un cliente
-   - http://localhost:8000/api/ventas/cliente/{id]
+   - http://localhost:8000/api/ventas/cliente/{id}
  - GET de proveedores
    - http://localhost:8000/api/compras/proveedor
  - GET de un proveedor
-   - http://localhost:8000/api/compras/proveedor/{id]
+   - http://localhost:8000/api/compras/proveedor/{id}
